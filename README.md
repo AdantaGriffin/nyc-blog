@@ -3,76 +3,121 @@ Your friend Isa is a budding fashion blogger, and she’s asked you to build her
 Use your new HTML knowledge to create the underlying structure of the blog. Make sure to include plenty of pictures, links, lists, and other HTML elements that you’ve learned so that her fans have plenty to read.
 
 ## Installation
-For this project all that is needed is a text editor to create your html:5 doc.
+For this project all that is needed is a text editor to create your html:5 and css documents.
 ### Steps
 1.
-To start, add the < !DOCTYPE html > declaration as the very first line of code at the top of the index.html file. Add the < html > element below.
+A common usage of a navigation bar is to create shortcuts for a webpage. This will allow the user to go directly to the information they want to access through the navigation links.
+Create a < nav > element underneath the opening < body > tag.
 
 2.
-Below the < html > opening tag, add a < head > element. Below the < head > element, add the < body > element.
+Within the < nav > element, create a < ul > element to create an unordered list.
+The unordered list should contain the following three items:
+
+    a. Blog
+    b. Media
+    c. About
+Use an < li > element with < a href="" >< /a > nested within the < li > element to link the content to the nav bar. You may notice that the navbar doesn’t work right now but don’t worry, once the content is added, the navbar will be fully functional!
 
 3.
-Within the < head > tags, add a < title > element. Title the website “Everyday with Isa”.
+You need to title your blog, so people know what you’re writing about. Create a < header > element under the closing </ nav > tag.
+Within the < header > element, create an < h1 > element which should contain the following:
+New York City
 
 4.
-Directly below the opening < body > tag, add an < h1 > that says:
-“An Insider’s Guide to NYFW”
-Below that, add an < h2 > that says:
-“Getting Tickets & Picking the Shows”
-Below that, add an < h2 > that says:
-“Dressing for the Shows”
+Create a < main > element below the closing </ header > tag.
+
+Within the < main > element, create a < section > element with an id of “blog”.
+
+This < section > element will hold the main content of your webpage. You are giving this element an id so that you can target it with the nav bar.
 
 5.
-Here’s Isa’s first dispatch from Fashion Week! Let’s add a blog post. Between the < h1 > and first < h2 > tag, add a < p > tag that says:
-“NYFW can be both amazingly fun & incredibly overwhelming, especially if you’ve never been. Luckily, I’m here to give you an insider’s guide and make your first show a pleasurable experience. By taking my tips and tricks, and following your gut, you’ll have an unforgettable experience!”
+Create an < article > element within the < section > element.
+Then, create a < p > element within < article > that has the following:
+    New York City is made up of five boroughs which include Queens, Manhattan, Brooklyn, the Bronx, and Staten Island. The city is the home of approximately 8 million people. In 1876, France gifted the City of New York what is known as the Statue of Liberty, which is currently located on Liberty Island and commonly visited by tourists. However, it took 10 years to assemble and therefore wasn’t unveiled until 1886. Another tourist destination is Times Square. Times Square is commonly known for the big buildings, Broadway shows, and bright neon signs. This famous location was named after The New York Times after the Times moved to that location. Prior to that, it was named Longacre Square. New York City is also known for its bridges that connect the boroughs and allow ease of transportation.
 
 6.
-Between the first and second < h2 > tags, add another paragraph to the post using the < p > tag:
-“If you’re lucky or connected you can get an invite, sans the price tag. But I wasn’t so lucky or connected my first 2 years so I’m here to help you out. First, plan out which shows are most important to you and make a schedule and this is a biggie: SET A BUDGET. If you’re worrying about blowing your cash the whole time you won’t have fun. Then check out prices, days, and times and prioritize the designers you want to see most. Lastly, purchase your tickets and get excited!”
+Now that our blog has some content, the next step is adding media to enhance our blog.
+You can do this by using the < figure > element. Under the closing </ section > tag create a < figure > element.
 
 7.
-After the last < h2 > tag, add a final paragraph that says:
-“Always be true to your own sense of style, if you don’t you’ll be uncomfortable the whole time and it will show. Remember, NYFW is about expressing yourself and taking in what the designers have chosen to express through their new lines. Also it’s important to wear shoes you’ll be comfortable in all day. Obviously you want to look good, but you’ll be on your feet all day long, so be prepared.”
+Create an < img > tag within < figure > and use the following link as the src:
+    https://content.codecademy.com/courses/Semantic%20HTML/statue-of-liberty.jpeg
 
 8.
-Of course, this wouldn’t be a fashion blog without some images. Above each paragraph, add an < img > tag and set its src to be one of the following links:
-https://content.codecademy.com/courses/learn-html/elements-and-structure/image-one.jpeg
-https://content.codecademy.com/courses/learn-html/elements-and-structure/image-two.jpeg
-https://content.codecademy.com/courses/learn-html/elements-and-structure/image-three.jpeg
+Let’s describe the image for those who don’t know what statue this is!
+Using < figcaption > add this description of the image:
+This is the Statue of Liberty, a popular tourist attraction located on Liberty Island.
 
 9.
-Your first blog post is complete! Now let’s add an image of Isa, so her readers get to know her. Below the opening body tag, add an < img > tag with the following source:
-https://content.codecademy.com/courses/learn-html/elements-and-structure/profile.jpg
+For our blog post, you need to add additional content to enhance the post, you can do this by using the < aside > element.
+Under the closing </ figure > tag create an < aside > element.
+Within < aside >, create a < p > element containing the following information:
+New York City is very popular for the variety of great food it has. Some of the top food items in NYC include:
 
 10.
-Below the < img > tag, add an < h3 > that says “by Isabelle Rodriguez | 1 day ago”
+New York is known for its amazing food. Our blog should list some of the top food options in NYC. You can do this by creating an ordered list!
+Create an ordered list by using the < ol > element within the < aside > element. In an ordered list the first item is ranked one, the second item is ranked two and so on.
+The ordered list should contain the following seven items in this order:
+
+    1. Pizza
+    2. Bagels
+    3. Burgers and Sandwiches
+    4. Ramen
+    5. Tacos
+    6. Pasta
+    7. Desserts
 
 11.
-Isa wants her readers to know that she’s written a lot more than one post. Let’s make a list of some related blog posts. Beneath the last paragraph, add a < h4 > tag that says “Related Content”. Underneath that header tag, create an unordered list.
+Right now our blog post consists of only one image. Adding more media can help give a better visual representation of New York. Let’s create a section for the media content.
+Create a < section > element with an id of “media” under the closing </ aside > tag.
+Within the new < section > element, create an < article > element.
+Then, create an < h2 > element within < article > that says:
+The Scenery in NYC
 
 12.
-The unordered list should have the following four items:
-“How To Style Boyfriend Jeans”
-“When Print Is Too Much”
-“The Overalls Trend”
-“Fall’s It Color: Blush”
+You are going to add a little description to explain the media. Add a < p > element directly underneath the closing </ h2 > tag but within the < article > element with the following paragraph:
+While the view in the city is beautiful, the sounds are not as lovely. Below you'll see an example of the view and the sounds you'll deal with in NYC on a daily basis.
 
 13.
-Let’s get Isa’s blog connected to the rest of the web! In the first paragraph, turn ‘NYFW’ into a link and have it go to: https://en.wikipedia.org/wiki/New_York_Fashion_Week.
-Make sure to include the target="_blank" attribute so that it opens in a new page.
+New York City has a beautiful skyline, so let’s show that with a video.
+Under the closing </ article > tag, create a < video > element with the attribute controls. Use the following URL as the src: "https://content.codecademy.com/courses/Semantic%20HTML/nyc-skyline-timelapse.mp4".
 
 14.
-Isa wants to make sure that her friends can get in touch with her. At the bottom of your body, add a new < div > and set its id='contact'. Inside the < div >, create a new < p > tag and put the following contact information inside of it:
-email: isa@fashionblog.com | phone: 917-555-1098 | address: 371 284th St, New York, NY, 10001
+During the night time, the New York City skyline can light up the whole sky! This time you are going to use < embed > to display an image of the skyline.
+Create an < embed > element under the closing </ video > tag. Use the following URL as the src: "https://content.codecademy.com/courses/Semantic%20HTML/nyc-skyline.jpeg".
 
 15.
-Inside the contact < div >, put < strong > opening and closing tags around “email”, “phone”, and “address”.
+New York City is known as “the city that never sleeps.” At any point in the day, you can hear the traffic as you make your way through the city. Let’s add an audio clip to show how loud NYC can be.
+Create an < audio > tag with the attribute controls directly below the < embed > element. (Don’t forget the closing tag.)
+Inside the < audio > tag, insert an audio file with the following URL as the src: "https://content.codecademy.com/courses/Semantic%20HTML/nyc-sounds.mov".
 
 16.
-Let’s make the profile picture a link to the contact section of the webpage. Find the profile < img > tag, and surround it by opening and closing < a > tags. In the < a > tag, set href="#contact".
+At the bottom of a page, you can add a footer to credit you for the creation of this blog!
+Create a < footer > element with an id of “about” under the closing </ main > tag.
+Inside, add the following content:
+A < p > tag with “Posted by:” followed by your name.
+A < p > tag that provides one type of contact information for people to reach you at. For example:
+Contact information: Blogger@NYC.com
 
 17.
-Congrats! You’ve got the beginnings of a solid fashion blog. Feel free to make modifications and practice your HTML by adding more content.
+Congratulations! You successfully created a webpage using only semantic elements. Now that you’ve learned about the importance of Semantic HTML along with its benefits, it’s time to incorporate this knowledge into your future projects.
+Think about ways you could improve this project or create your very own project using semantic elements. Need some suggestions? Check the hint for some ideas to get you started!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #### Credits
 www.codecademy.com
